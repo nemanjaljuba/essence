@@ -9,7 +9,7 @@ namespace Essence;
 use ArrayIterator;
 use IteratorAggregate;
 use JsonSerializable;
-
+use Traversable;
 
 
 /**
@@ -256,7 +256,7 @@ class Media implements IteratorAggregate, JsonSerializable {
 	 *
 	 *	@return ArrayIterator Iterator.
 	 */
-	public function getIterator() {
+	public function getIterator(): Traversable {
 		return new ArrayIterator($this->_properties);
 	}
 
